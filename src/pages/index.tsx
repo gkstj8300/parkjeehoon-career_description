@@ -4,7 +4,7 @@ import { NextPageWithLayout } from "./types";
 import { None } from '@/layouts/none';
 
 const Home = dynamic(
-	() => import('@/components/Home').then(module => module.Home),
+	() => import('@/components/home').then(module => module.Home),
 	{ ssr: false }
 );
 

@@ -1,5 +1,5 @@
 import type { Translation } from '@/i18n/types';
-import { meta } from '../../../../components/Meta/Meta.i18n.ko';
+import { meta } from '../../../../components/meta/Meta.i18n.ko';
 
 const translation: Translation = {
 	common: {
