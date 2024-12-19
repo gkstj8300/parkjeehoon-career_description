@@ -10,7 +10,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     return (
         <div className={styles.layout}>
-            <Header />
+            {/* <Header /> */}
             <div className={styles.main}>
                 <div className={styles.childrenWrapper}>{children}</div>
             </div>
