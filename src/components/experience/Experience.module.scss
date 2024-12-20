@@ -1,0 +1,64 @@
+.experience {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.details {
+    flex: 1;
+    max-width: 150px;
+    text-align: right;
+    margin-right: 20px;
+    border-bottom: 1px #888 solid;
+    padding-bottom: 15px;
+}
+
+.companyImg {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    max-width: 100%;
+    border-color: rgb(234 236 238);
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.companyName {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.duration {
+    font-size: 1.0rem;
+}
+
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.description {
+    flex: 2;
+    padding: 0;
+    margin: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.description li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}

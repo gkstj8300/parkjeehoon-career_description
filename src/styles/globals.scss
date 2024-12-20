@@ -59,14 +59,9 @@ td {
 	outline: 0;
 }
 
-// ul,
-// ol,
-// li,
-// dl,
-// dt,
-// dd {
-// 	list-style: none outside none;
-// }
+section:not(:first-of-type) {
+    margin-top: 40px;
+}
 
 tr,
 th,

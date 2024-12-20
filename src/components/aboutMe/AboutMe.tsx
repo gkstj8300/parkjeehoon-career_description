@@ -25,7 +25,7 @@ export const AboutMe: React.FC = () => {
                     </ul>
                 </div>
                 <div>
-                    <Image className={styles.profileImg} src={profileImg} alt=""/>
+                    <Image className={styles.profileImg} src={profileImg} alt="profileImg"/>
                 </div>
             </div>
         </section>
