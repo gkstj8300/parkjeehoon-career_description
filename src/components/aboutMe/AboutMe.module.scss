@@ -1,23 +1,23 @@
 .aboutMeWrap {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .introduction {
-    line-height: 1.15;
+	line-height: 1.15;
 }
 
 .profileImg {
-    width: 200px;
-    height: 200px;
-    border-radius: 75px;
+	width: 200px;
+	height: 200px;
+	border-radius: 75px;
 }
 
 .description {
-    list-style-type: disc;
-    margin-left: 1.5rem;
+	margin-left: 1.5rem;
+	list-style-type: disc;
 
-    > li::marker {
-        font-size: 1.5em;
-    }
+	> li::marker {
+		font-size: 1.5em;
+	}
 }

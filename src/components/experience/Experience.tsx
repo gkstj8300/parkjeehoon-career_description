@@ -1,8 +1,8 @@
-import styles from './Experience.module.scss';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { Title } from '@/components/ui/title';
+import styles from './Experience.module.scss';
 import naedamLogoImg from './assets/neadam_logo.png';
+import { Title } from '@/components/ui/title';
 
 export const Experience: React.FC = () => {
     

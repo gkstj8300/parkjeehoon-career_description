@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+
 import { TFunction } from 'i18next';
 
 type ValidationErrorTranslator<
@@ -34,6 +36,7 @@ function resolveMessage<P extends Record<string, string | number> = {}>(
 	t: TFunction
 ) {
 	const { path, label, ...restPrams } = params;
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
 	return t(`common.$validations.${type}`, {
 		field: label ?? t(`common.$fields.${path}`),

@@ -1,8 +1,8 @@
 import i18next from 'i18next';
-import { Layout } from '@/components/layout';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { setLocale } from 'yup';
+import { Layout } from '@/components/layout';
 import '@/styles/globals.scss';
 import '@/i18n';
 import { Meta } from "@/components/meta";

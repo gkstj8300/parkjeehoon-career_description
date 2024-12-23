@@ -1,6 +1,6 @@
 import styles from './Layout.module.scss';
-import { Header } from './header';
 import { Footer } from "./footer"
+import { Header } from './header';
 
 type LayoutProps = {
     children: React.ReactNode;

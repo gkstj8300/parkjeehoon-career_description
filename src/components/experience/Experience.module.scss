@@ -1,64 +1,64 @@
 .experience {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+	font-family: Arial, sans-serif;
 }
 
 .details {
-    flex: 1;
-    max-width: 150px;
-    text-align: right;
-    margin-right: 20px;
-    border-bottom: 1px #888 solid;
-    padding-bottom: 15px;
+	flex: 1;
+	max-width: 150px;
+	margin-right: 20px;
+	padding-bottom: 15px;
+	text-align: right;
+	border-bottom: 1px #888 solid;
 }
 
 .companyImg {
-    width: 8rem;
-    height: 8rem;
-    object-fit: contain;
-    max-width: 100%;
-    border-color: rgb(234 236 238);
-    border-radius: 8px;
-    border-width: 1px;
-    border-style: solid;
+	width: 8rem;
+	max-width: 100%;
+	height: 8rem;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(234 236 238);
+	border-radius: 8px;
+	object-fit: contain;
 }
 
 .title {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 16px;
 }
 
 .companyName {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    margin: 5px 0;
+	margin: 5px 0;
+	font-weight: 600;
+	font-size: 1.5rem;
+	line-height: 2rem;
 }
 
 .duration {
-    font-size: 1.0rem;
+	font-size: 1rem;
 }
 
 .divider {
-    width: 1px;
-    background-color: #ccc;
-    height: 150px;
-    margin-right: 20px;
+	width: 1px;
+	height: 150px;
+	margin-right: 20px;
+	background-color: #ccc;
 }
 
 .description {
-    flex: 2;
-    padding: 0;
-    margin: 0;
-    list-style-type: disc;
-    list-style-position: inside;
+	flex: 2;
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+	list-style-type: disc;
 }
 
 .description li {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.6;
 }

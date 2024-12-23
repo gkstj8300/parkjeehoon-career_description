@@ -1,9 +1,8 @@
-import styles from './AboutMe.module.scss';
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
-import { Title } from '@/components/ui/title';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
+import styles from './AboutMe.module.scss';
 import profileImg from '@/components/aboutMe/assets/profile.png';
+import { Title } from '@/components/ui/title';
 
 export const AboutMe: React.FC = () => {
 

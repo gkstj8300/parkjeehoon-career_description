@@ -9,8 +9,11 @@
     "dev": "next dev -p 3010",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "i18n-scan": "cd tools/i18n-scanner && npm start"
+    "lint": "next lint && eslint --fix \"{config,tools}/**/*.{ts,tsx}\" && stylelint --fix 'src/**/*.{css,scss,sass}'",
+    "i18n-scan": "cd tools/i18n-scanner && npm start",
+    "prettier:validation-only": "prettier --check --loglevel warn .",
+    "stylelint:validation-only": "stylelint \"src/**/*.scss\"",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "dependencies": {
     "@babel/parser": "^7.26.3",
@@ -41,11 +44,22 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-i18next": "^8.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "eslint": "^8",
     "eslint-config-next": "15.0.4",
+    "eslint-import-resolver-webpack": "^0.13.10",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "sass": "^1.75.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-css-modules": "^2.3.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-rational-order-plugin": "^1.0.2",
+    "stylelint-scss": "^4.1.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
-    "typescript": "^5"
+    "typescript": "^5.4.5"
   }
 }

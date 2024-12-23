@@ -1,13 +1,13 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #fff;
+	--foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body,
@@ -60,7 +60,7 @@ td {
 }
 
 section:not(:first-of-type) {
-    margin-top: 40px;
+	margin-top: 40px;
 }
 
 tr,
@@ -77,27 +77,27 @@ td {
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -115,19 +115,19 @@ a {
 	border-radius: 8px;
 }
 
-h1, h2 {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    font-weight: 600;
+h1,
+h2 {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-weight: 600;
 }
 
 h2 {
-    font-size: 2.25rem;
+	font-size: 2.25rem;
 }
 
-
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+	html {
+		color-scheme: dark;
+	}
 }

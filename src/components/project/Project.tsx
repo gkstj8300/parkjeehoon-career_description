@@ -1,5 +1,3 @@
-import styles from './Project.module.scss';
-import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { Title } from '@/components/ui/title';
 

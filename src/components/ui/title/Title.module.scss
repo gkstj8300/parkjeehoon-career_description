@@ -1,20 +1,20 @@
 .container {
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	gap: 20px;
+	justify-content: center;
+	align-items: center;
 	margin: 20px 0;
 }
 
 .line {
-    flex: 1;
-    height: 1px;
-    background-color: #000;
+	flex: 1;
+	height: 1px;
+	background-color: #000;
 }
 
 .title {
-    font-size: 24px;
-    font-weight: 500;
-    color: #000;
-    text-align: center;
+	color: #000;
+	font-weight: 500;
+	font-size: 24px;
+	text-align: center;
 }
