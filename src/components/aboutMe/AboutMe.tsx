@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './AboutMe.module.scss';
-import profileImg from '@/components/aboutMe/assets/profile.png';
+import profileImg from '@/components/aboutMe/assets/profile.jpg';
 import { Title } from '@/components/ui/title';
 
 export const AboutMe: React.FC = () => {
@@ -16,10 +16,26 @@ export const AboutMe: React.FC = () => {
                         <Trans>{t('common.aboutMe.introduction')}</Trans>
                     </h2>
                     <ul className={styles.description}>
-                        <li>description1</li>
-                        <li>description2</li>
-                        <li>description3</li>
-                        <li>description4</li>
+                        <li>
+                            <i className={styles.phoneIcon}></i>
+                            <p>{t('common.aboutMe.phone')}</p>
+                        </li>
+                        <li>
+                            <i className={styles.emailIcon}></i>
+                            <p>{t('common.aboutMe.email')}</p>
+                        </li>
+                        <li>
+                            <i className={styles.githubIcon}></i>
+                            <a href={t('common.aboutMe.github')}>
+                                {t('common.aboutMe.github')}
+                            </a>
+                        </li>
+                        <li>
+                            <i className={styles.blogIcon}></i>
+                            <a href={t('common.aboutMe.blog')}>
+                                {t('common.aboutMe.blog')}
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div>

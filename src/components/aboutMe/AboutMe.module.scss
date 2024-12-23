@@ -17,7 +17,47 @@
 	margin-left: 1.5rem;
 	list-style-type: disc;
 
-	> li::marker {
-		font-size: 1.5em;
+	li {
+		display: flex;
+		align-items: center;
+		line-height: 2.0rem;
+		list-style-type: none;
 	}
+
+	i {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	p {
+		margin-left: 10px;
+	}
+
+	a {
+		margin-left: 10px;
+	}
+}
+
+.phoneIcon {
+	background-image: url(./assets/phoneIcon.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.emailIcon {
+	background-image: url(./assets/emailIcon.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.githubIcon {
+	background-image: url(./assets/githubIcon.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.blogIcon {
+	background-image: url(./assets/blogIcon.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
