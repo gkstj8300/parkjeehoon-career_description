@@ -19,8 +19,6 @@ glob('../../src/**/*.{ts,tsx}', (err: Error|null, files: string[]) => {
 	files.forEach(filePath => {
 		const warnings: string[] = [];
 		const errors: string[] = [];
-		const isPCPath = filePath.includes('/pc/');
-		const isMobilePath = filePath.includes('/mobile/');
 		const content = fs.readFileSync(filePath, { encoding: 'utf-8' });
 		const ast = parse(content, {
 			sourceType: 'module',
@@ -64,17 +62,6 @@ glob('../../src/**/*.{ts,tsx}', (err: Error|null, files: string[]) => {
 							errors.push(`Missing key ${key}`);
 						}
 					}
-				}
-
-				if (key && key.startsWith('mobile.') && isPCPath) {
-					warnings.push(`Using mobile key in PC file ${key}`);
-				} else if (
-					key &&
-					!key.startsWith('mobile.') &&
-					!key.startsWith('utils.') &&
-					isMobilePath
-				) {
-					warnings.push(`Using PC key in mobile file ${key}`);
 				}
 			},
 		});

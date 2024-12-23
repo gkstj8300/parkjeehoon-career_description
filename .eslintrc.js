@@ -12,8 +12,6 @@ module.exports = {
 		'import/resolver': 'webpack',
 	},
 	rules: {
-		//=========================================================================
-		// basic rules
 		curly: 'error',
 		'lines-between-class-members': ['error', 'always'],
 		// Suppress to conflict to @typescript-eslint/explicit-member-accessibility
@@ -52,21 +50,16 @@ module.exports = {
 				block: {
 					balanced: true,
 				},
-				markers: ['/'], // Suppress errors when use Triple-slash directives
+				markers: ['/'],
 			},
 		],
 		'react/display-name': 'off',
-
-		//=========================================================================
-		// react hooks
 		'react-hooks/exhaustive-deps': [
 			'warn',
 			{
 				enableDangerousAutofixThisMayCauseInfiniteLoops: true,
 			},
 		],
-		//=========================================================================
-		// import
 		'import/no-duplicates': ['error'],
 		'import/no-namespace': ['error'],
 		'import/order': [
@@ -78,23 +71,14 @@ module.exports = {
 				'newlines-between': 'never',
 			},
 		],
-		//=========================================================================
-		// unused-imports
 		'unused-imports/no-unused-imports': 'error',
 	},
 	overrides: [
 		{
-			// Rules for TypeScript only
 			files: ['**/*.ts?(x)'],
 			rules: {
-				//=====================================================================
-				// basic rules
-				// Suppress to conflict to @typescript-eslint/no-explicit-any
 				'no-any': 'off',
-				// For overload
 				'no-dupe-class-members': 'off',
-				//=====================================================================
-				// @typescript-eslint
 				'@typescript-eslint/explicit-member-accessibility': [
 					'error',
 					{
@@ -107,40 +91,28 @@ module.exports = {
 			},
 		},
 		{
-			// Rules for i18n translation dictionaries
 			files: ['src/i18n/*/resources/*/translation/**/*.ts'],
 			rules: {
-				//=====================================================================
-				// sort-keys-fix
 				'sort-keys-fix/sort-keys-fix': 'error',
 			},
 		},
 		{
-			// Rules for i18n files
 			files: ['src/**/*.i18n.*.ts'],
 			rules: {
 				'no-restricted-imports': [
 					'error',
 					{
-						// NG: import { customerServicePanel } from '@/components/pc/ui/panels/CustomerServicePanel/i18n.en';
-						// OK: import { Translation } from '@/i18n/types';
 						patterns: defaultRestrictedImportPatterns.concat('@/**/*i18n.*'),
 					},
 				],
 			},
 		},
 		{
-			// Rules for i18n translation index.ts
 			files: ['src/i18n/*/resources/*/translation/index.ts'],
 			rules: {
-				// translation の index.ts のみ、親方向への相対パス参照を許可する。
-				// https://github.com/misumi-org/order-web-id/issues/469
 				'no-restricted-imports': [
 					'error',
 					{
-						// ただし、やはり @ を使った i18n 定義ファイルの参照を許さない
-						// NG: import { customerServicePanel } from '@/components/pc/ui/panels/CustomerServicePanel/i18n.en';
-						// OK: import { Translation } from '@/i18n/types';
 						patterns: ['@/**/*i18n.*'],
 					},
 				],

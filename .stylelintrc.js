@@ -54,25 +54,4 @@ module.exports = {
 		'alpha-value-notation': 'number',
 		'function-url-quotes': 'never',
 	},
-	overrides: [
-		{
-			files: ['src/styles/*/legacy/**/*.scss'],
-			rules: {
-				'declaration-block-no-duplicate-properties': null,
-				'font-family-no-duplicate-names': null,
-				'function-url-quotes': null,
-				'keyframes-name-pattern': null,
-				'media-feature-name-no-unknown': null,
-				'selector-class-pattern': '^[a-zA-Z0-9_-]+$',
-				'selector-id-pattern': null,
-				'selector-no-vendor-prefix': null,
-				'selector-pseudo-class-no-unknown': null,
-				'selector-pseudo-element-no-unknown': null,
-				'selector-type-no-unknown': null,
-				'no-descending-specificity': null,
-				'no-duplicate-selectors': null,
-				'value-no-vendor-prefix': null,
-			},
-		},
-	],
 };
