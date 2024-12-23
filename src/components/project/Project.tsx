@@ -2,13 +2,11 @@ import { useTranslation } from 'react-i18next';
 import styles from './Project.module.scss';
 import { ProjectItem } from './ProjectItem';
 import hanwhaLogo from './assets/hanwhaLogo.png';
-import misumiLogo from './assets/misumiLogo.svg';
+import misumiLogo from './assets/misumiLogo.png';
 import naedamLogo from './assets/naedamLogo.jpg';
 import { Title } from '@/components/ui/title';
 
-export type ProjectItem = {
-    className?: string,
-    index?: number,
+type ProjectItem = {
     projectName: string,
     logoImg: string,
     duration: string,
@@ -43,7 +41,7 @@ export const Project: React.FC = () => {
                 {projects.map((item, index) => 
                     <ProjectItem 
                         key={item.projectName}
-                        index={index}
+                        idx={index}
                         projectName={item.projectName}
                         duration={item.duration}
                         logoImg={item.logoImg}
