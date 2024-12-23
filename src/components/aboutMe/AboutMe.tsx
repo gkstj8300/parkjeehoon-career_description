@@ -26,13 +26,13 @@ export const AboutMe: React.FC = () => {
                         </li>
                         <li>
                             <i className={styles.githubIcon}></i>
-                            <a href={t('common.aboutMe.github')}>
+                            <a href={t('common.aboutMe.github')} target="_blank">
                                 {t('common.aboutMe.github')}
                             </a>
                         </li>
                         <li>
                             <i className={styles.blogIcon}></i>
-                            <a href={t('common.aboutMe.blog')}>
+                            <a href={t('common.aboutMe.blog')} target="_blank">
                                 {t('common.aboutMe.blog')}
                             </a>
                         </li>
