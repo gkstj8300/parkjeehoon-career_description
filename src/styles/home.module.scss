@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
 .home :global {
 	ul,
 	ol,
@@ -37,7 +39,7 @@
 	margin: 0;
 	padding-left: 0;
 	font-size: 14px;
-	font-family: var(--font-geist-mono);
+	font-family: "Noto Sans KR", serif;
 	line-height: 24px;
 	letter-spacing: -0.01em;
 	list-style-position: inside;
@@ -50,7 +52,7 @@
 .main code {
 	padding: 2px 4px;
 	font-weight: 600;
-	font-family: inherit;
+	font-family: "Noto Sans KR", serif;
 	background: var(--gray-alpha-100);
 	border-radius: 4px;
 }

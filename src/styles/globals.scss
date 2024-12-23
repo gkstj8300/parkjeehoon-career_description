@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
 :root {
 	--background: #fff;
 	--foreground: #171717;
@@ -40,7 +42,7 @@ section {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
-	font-family: var(--font-geist-mono);
+	font-family: "Noto Sans KR", serif;
 	vertical-align: baseline;
 	background: transparent;
 	border: 0;
@@ -83,7 +85,7 @@ body {
 
 body {
 	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Noto Sans KR", serif;
 	background: var(--background);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
