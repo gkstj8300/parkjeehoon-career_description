@@ -19,7 +19,7 @@ module.exports = {
 		// Suppress to conflict to @typescript-eslint/explicit-member-accessibility
 		'member-access': 'off',
 		'no-console': 'error',
-		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'no-debugger': 'error',
 		'no-dupe-keys': 'error',
 		'no-eval': 'error',
 		'no-restricted-imports': [

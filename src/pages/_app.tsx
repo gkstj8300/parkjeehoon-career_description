@@ -6,7 +6,8 @@ import { Layout } from '@/components/layout';
 import '@/styles/globals.scss';
 import '@/i18n';
 import { Meta } from "@/components/meta";
-import { type AppPropsWithLayout } from '@/pages/types';
+import { Standard } from '@/layouts/standard';
+import { type AppPropsWithLayout } from '@/utils/types';
 import { createLocale } from '@/validators/locale';
 
 (() => {
@@ -17,6 +18,8 @@ import { createLocale } from '@/validators/locale';
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
     const [t] = useTranslation();
 
+    const getLayout = Component.getLayout || Standard;
+
     useEffect(() => {
 		setLocale(createLocale(t));
 	}, [t]);
@@ -24,7 +27,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
     return (
         <Layout>      
             <Meta />
-            <Component {...pageProps} />
+            {getLayout(<Component {...pageProps} />)}
         </Layout>
     );
 }

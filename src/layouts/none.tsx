@@ -1,4 +1,4 @@
-import { GetLayout } from '@/pages/types';
+import { GetLayout } from '@/utils/types';
 
 export const None: GetLayout = page => {
 	return (

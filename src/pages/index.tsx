@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
-import { NextPageWithLayout } from "./types";
 import { None } from '@/layouts/none';
 import styles from '@/styles/home.module.scss';
+import { NextPageWithLayout } from "@/utils/types";
 
 const Home = dynamic(
 	() => import('@/components/home').then(module => module.Home),
