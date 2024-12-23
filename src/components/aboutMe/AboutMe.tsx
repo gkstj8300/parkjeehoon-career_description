@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './AboutMe.module.scss';
 import profileImg from '@/components/aboutMe/assets/profile.png';
@@ -24,7 +23,8 @@ export const AboutMe: React.FC = () => {
                     </ul>
                 </div>
                 <div>
-                    <Image className={styles.profileImg} src={profileImg} alt="profileImg"/>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img className={styles.profileImg} src={profileImg.src} alt="profileImg"/>
                 </div>
             </div>
         </section>

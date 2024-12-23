@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './Experience.module.scss';
 import naedamLogoImg from './assets/neadam_logo.png';
@@ -13,7 +12,8 @@ export const Experience: React.FC = () => {
             <Title title={t('common.experience.title')} />
             <div className={styles.experience}>
                 <div className={styles.details}>
-                    <Image className={styles.companyImg} src={naedamLogoImg} alt="companyImg"/>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img className={styles.companyImg} src={naedamLogoImg.src} alt="companyImg"/>
                     <div className={styles.companyWrap}>
                         <h4 className={styles.companyName}>{t('common.experience.naedam.name')}</h4>
                         <p className={styles.duration}>{t('common.experience.naedam.duration')}</p>
