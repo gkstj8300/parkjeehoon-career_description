@@ -1,0 +1,25 @@
+.container {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.line {
+	flex: 1;
+	height: 1px;
+	background-color: #000;
+}
+
+.title {
+	color: #000;
+	font-weight: 500;
+	font-size: 24px;
+	text-align: center;
+}
+
+.introduce {
+	padding-left: 1rem;
+	border-left: 1px solid #000;
+}

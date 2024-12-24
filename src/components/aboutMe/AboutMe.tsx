@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './AboutMe.module.scss';
-import profileImg from '@/components/aboutMe/assets/profile.jpg';
+import profileImg from '@/components/aboutMe/assets/profile.png';
 import { Title } from '@/components/ui/title';
 
 export const AboutMe: React.FC = () => {
