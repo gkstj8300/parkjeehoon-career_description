@@ -1,40 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Park Jee Hoon Portfolio
 
-## Getting Started
+**Version**: 0.1.0  
+**Node.js Version**: 20.x
 
-First, run the development server:
+---
+
+## 프로젝트 소개
+`parkjeehoon-portfolio`는 박지훈 개인 포트폴리오를 위한 웹 애플리케이션 프로젝트입니다.  
+[Next.js](https://nextjs.org/)와 최신 프론트엔드 기술 스택을 활용하여 설계되었으며,  
+i18n(다국어 지원), 스타일 관리, 코드 정리를 통해 유지보수성과 확장성을 극대화했습니다.
+
+---
+
+## 주요 기술 스택
+
+- **Framework**: Next.js, React.js
+- **State Management**: React Redux
+- **Styling**: SCSS, CSS Modules
+- **Form Handling**: React Hook Form
+- **i18n**: react-i18next
+- **Type Checking**: TypeScript
+- **Validation**: Yup
+- **Linting & Formatting**: ESLint, Stylelint, Prettier
+
+---
+
+## 프로젝트 실행
+
+### 개발 환경 설정
+
+1. **Node.js 설치**:  
+   이 프로젝트는 `Node.js 20.x` 버전을 요구합니다.  
+   [Node.js 공식 웹사이트](https://nodejs.org/)에서 해당 버전을 설치하세요.
+
+2. **Dependencies 설치**:  
+   프로젝트 루트 디렉토리에서 다음 명령어를 실행하세요:
+   ```bash
+   npm install
 
 ```bash
+개발 서버 실행:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+프로덕션 빌드:
+npm run build
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+프로덕션 서버 시작:
+npm run start
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+Lint & Style Validation:
+npm run lint
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```bash
+i18n 리소스 스캔:
+npm run i18n-scan
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 프로젝트 구조
+.
+├── public/                # Static assets
+├── src/
+│   ├── components/        # Reusable components
+│   ├── pages/             # Next.js pages
+│   ├── styles/            # Global styles
+│   └── utils/             # Utility functions
+├── tools/                 # Project-specific tools (e.g., i18n scanner)
+├── package.json           # Dependencies and scripts
+└── README.md              # Project documentation
 
-## Learn More
+## 주요 의존성
+### Dependencies
+* React.js: 18.2.0
+* Next.js: 14.2.1
+* React Redux: 7.2.6
+* React Hook Form: 7.47.0
+* i18next/react-i18next: 21.6.6 / 11.18.6
+* Yup: 1.5.0
+* Lodash: 4.17.21
+* Dev Dependencies
+* TypeScript: ^5.4.5
+* ESLint: ^8.x
+* Stylelint: ^14.2.0
+* Prettier: Integration with Stylelint and ESLint
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 기타 정보
+### 라이센스: 개인 포트폴리오 용도로 제작된 프로젝트로, 무단 복제 및 사용을 금합니다.
+### 문의: gkstj8300@naver.com
