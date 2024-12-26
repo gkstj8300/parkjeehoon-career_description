@@ -11,5 +11,6 @@ export const introduce: Translation = {
         Lorem  ipsum dolor sit amet, consectetur adipiscing elit. 
         Praesent sit amet vulputate felis vivamus facilisis ligula<br /><br />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Praesent sit amet vulputate felis vivamus facilisis ligula`
+        Praesent sit amet vulputate felis vivamus facilisis ligula`,
+    updateDate: 'Latest Updated',
 };

@@ -20,6 +20,22 @@
 }
 
 .introduce {
-	padding-left: 1rem;
-	border-left: 1px solid #000;
+    display: flex;
+    padding-left: 1rem;
+    border-left: 1px solid #000;
+    flex-direction: column;
+}
+
+.updateWrap {
+	text-align: right;
+}
+
+.lastUpdate {
+	font-size: 80%;
+    font-weight: 600;
+}
+
+.updateDate {
+	font-size: 80%;
+	margin-left: 0.5rem;
 }
