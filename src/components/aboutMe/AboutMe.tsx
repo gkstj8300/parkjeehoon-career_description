@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './AboutMe.module.scss';
-import profileImg from '@/components/aboutMe/assets/profile.png';
+import profileImg from '@/components/aboutMe/assets/profile.jpg';
 import { Title } from '@/components/ui/title';
 
 export const AboutMe: React.FC = () => {
@@ -38,7 +38,7 @@ export const AboutMe: React.FC = () => {
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div className={styles.progileWrap}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className={styles.profileImg} src={profileImg.src} alt="profileImg"/>
                 </div>

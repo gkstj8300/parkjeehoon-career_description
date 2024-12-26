@@ -53,11 +53,19 @@
 	border-radius: 4px;
 }
 
+@media (min-width: 768px) {
+    .page {
+        gap: 8rem;
+		margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
 @media (max-width: 600px) {
-	.page {
-		padding: 32px;
-		padding-bottom: 80px;
-	}
+	// .page {
+	// 	padding: 32px;
+	// 	padding-bottom: 80px;
+	// }
 
 	.main {
 		align-items: center;

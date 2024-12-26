@@ -32,3 +32,10 @@
 	color: #585858;
 	font-size: 0.8rem;
 }
+
+@media (max-width: 530px) {
+	.educationItem {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
