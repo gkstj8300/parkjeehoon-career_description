@@ -7,64 +7,43 @@ import naedamLogo from './assets/naedamLogo.jpg';
 import { Title } from '@/components/ui/title';
 
 type ProjectItem = {
-    projectName: string,
-    logoImg: string,
-    durationStart: string,
-    durationEnd: string,
-    skillKeywords: string,
-}
+    projectName: string;
+    logoImg: string;
+    durationStart: string;
+    durationEnd: string;
+    skillKeywords: string;
+};
+
+const projectData = [
+    { key: 'hanwha', logoImg: hanwhaLogo.src },
+    { key: 'naedam', logoImg: naedamLogo.src },
+    { key: 'misumiMaintenance', logoImg: misumiLogo.src },
+    { key: 'misumiRenewal', logoImg: misumiLogo.src },
+];
 
 export const Project: React.FC = () => {
-
     const { t } = useTranslation();
 
-    const projects: ProjectItem[] = [
-        {
-            projectName: t('common.project.hanwha.name'),
-            logoImg: hanwhaLogo.src,
-            durationStart: t('common.project.hanwha.durationStart'),
-            durationEnd: t('common.project.hanwha.durationEnd'),
-            skillKeywords: t('common.project.hanwha.skillKeywords'),
-        },
-        {
-            projectName: t('common.project.naedam.name'),
-            logoImg: naedamLogo.src,
-            durationStart: t('common.project.naedam.durationStart'),
-            durationEnd: t('common.project.naedam.durationEnd'),
-            skillKeywords: t('common.project.naedam.skillKeywords'),
-        },
-        {
-            projectName: t('common.project.misumiMaintenance.name'),
-            logoImg: misumiLogo.src,
-            durationStart: t('common.project.misumiMaintenance.durationStart'),
-            durationEnd: t('common.project.misumiMaintenance.durationEnd'),
-            skillKeywords: t('common.project.misumiMaintenance.skillKeywords'),
-        },
-        {
-            projectName: t('common.project.misumiRenewal.name'),
-            logoImg: misumiLogo.src,
-            durationStart: t('common.project.misumiRenewal.durationStart'),
-            durationEnd: t('common.project.misumiRenewal.durationEnd'),
-            skillKeywords: t('common.project.misumiRenewal.skillKeywords'),
-        },
-    ];
+    const projects: ProjectItem[] = projectData.map(({ key, logoImg }) => ({
+        projectName: t(`common.project.${key}.name`),
+        logoImg,
+        durationStart: t(`common.project.${key}.durationStart`),
+        durationEnd: t(`common.project.${key}.durationEnd`),
+        skillKeywords: t(`common.project.${key}.skillKeywords`),
+    }));
 
     return (
         <section>
             <Title title={t('common.project.title')} />
             <div className={styles.projects}>
-                {projects.map((item, index) => 
-                    <ProjectItem 
-                        key={item.projectName}
+                {projects.map((item, index) => (
+                    <ProjectItem
+                        key={index}
                         idx={index}
-                        projectName={item.projectName}
-                        durationStart={item.durationStart}
-                        durationEnd={item.durationEnd}
-                        logoImg={item.logoImg}
-                        skillKeywords={item.skillKeywords}
+                        {...item}
                     />
-                )}
+                ))}
             </div>
         </section>
-    )
-}
+    );
+};
