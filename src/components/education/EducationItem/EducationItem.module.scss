@@ -1,0 +1,34 @@
+.educationItem {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ccc;
+
+	&:first-of-type {
+		padding-top: 0;
+	}
+}
+
+.duration {
+	padding: 0 15px;
+	color: #585858;
+	font-size: 1.7rem;
+
+	span {
+		padding: 0 10px;
+	}
+}
+
+.body {
+	padding: 0 15px;
+}
+
+.name {
+	font-size: 1.4rem;
+}
+
+.major {
+	color: #585858;
+	font-size: 0.8rem;
+}
