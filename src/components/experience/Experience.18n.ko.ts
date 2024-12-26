@@ -4,6 +4,7 @@ export const experience: Translation = {
     title: 'Experience',
     naedam: {
         name: '내담C&C',
-        duration: '2022-03 - 재직중',
+        durationStart: '2022.03',
+        durationEnd: '재직중',
     }
 };

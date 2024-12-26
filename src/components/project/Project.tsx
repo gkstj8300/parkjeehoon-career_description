@@ -9,7 +9,8 @@ import { Title } from '@/components/ui/title';
 type ProjectItem = {
     projectName: string,
     logoImg: string,
-    duration: string,
+    durationStart: string,
+    durationEnd: string,
     skillKeywords: string,
 }
 
@@ -21,25 +22,29 @@ export const Project: React.FC = () => {
         {
             projectName: t('common.project.hanwha.name'),
             logoImg: hanwhaLogo.src,
-            duration: t('common.project.hanwha.duration'),
+            durationStart: t('common.project.hanwha.durationStart'),
+            durationEnd: t('common.project.hanwha.durationEnd'),
             skillKeywords: t('common.project.hanwha.skillKeywords'),
         },
         {
             projectName: t('common.project.naedam.name'),
             logoImg: naedamLogo.src,
-            duration: t('common.project.naedam.duration'),
+            durationStart: t('common.project.naedam.durationStart'),
+            durationEnd: t('common.project.naedam.durationEnd'),
             skillKeywords: t('common.project.naedam.skillKeywords'),
         },
         {
             projectName: t('common.project.misumiMaintenance.name'),
             logoImg: misumiLogo.src,
-            duration: t('common.project.misumiMaintenance.duration'),
+            durationStart: t('common.project.misumiMaintenance.durationStart'),
+            durationEnd: t('common.project.misumiMaintenance.durationEnd'),
             skillKeywords: t('common.project.misumiMaintenance.skillKeywords'),
         },
         {
             projectName: t('common.project.misumiRenewal.name'),
             logoImg: misumiLogo.src,
-            duration: t('common.project.misumiRenewal.duration'),
+            durationStart: t('common.project.misumiRenewal.durationStart'),
+            durationEnd: t('common.project.misumiRenewal.durationEnd'),
             skillKeywords: t('common.project.misumiRenewal.skillKeywords'),
         },
     ];
@@ -53,7 +58,8 @@ export const Project: React.FC = () => {
                         key={item.projectName}
                         idx={index}
                         projectName={item.projectName}
-                        duration={item.duration}
+                        durationStart={item.durationStart}
+                        durationEnd={item.durationEnd}
                         logoImg={item.logoImg}
                         skillKeywords={item.skillKeywords}
                     />

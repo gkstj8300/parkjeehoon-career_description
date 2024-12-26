@@ -39,6 +39,10 @@
 
 .duration {
 	font-size: 1rem;
+
+	span {
+		padding: 0 5px;
+	}
 }
 
 .divider {
@@ -60,4 +64,12 @@
 	margin-bottom: 10px;
 	font-size: 14px;
 	line-height: 1.6;
+}
+
+.calculateDuration {
+	color: #fff;
+	background-color: rgb(43, 157, 177);
+	font-size: 0.8rem;
+	text-align: center;
+	border-radius: 10px;
 }

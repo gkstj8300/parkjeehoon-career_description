@@ -6,7 +6,8 @@ type Props = {
     idx: number,
     projectName: string,
     logoImg: string,
-    duration: string,
+    durationStart: string,
+    durationEnd: string,
     skillKeywords: string,
 }
 
@@ -14,7 +15,8 @@ export const ProjectItem: React.FC<Props> = ({
     idx,
     projectName,
     logoImg,
-    duration,
+    durationStart,
+    durationEnd,
     skillKeywords,
 }) => {
     const isEven = useMemo(() => 
@@ -24,6 +26,24 @@ export const ProjectItem: React.FC<Props> = ({
     const skillList = useMemo(() => 
         skillKeywords.split(',')
     , [skillKeywords]);
+
+    const calculateDuration = useMemo(() => {
+        const startDate = new Date(durationStart);
+        const endDate = durationEnd === '진행중' ? new Date() : new Date(durationEnd);
+    
+        let years = endDate.getFullYear() - startDate.getFullYear();
+        let months = endDate.getMonth() - startDate.getMonth();
+    
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        const yearText = years > 0 ? `${years}년` : '';
+        const monthText = months > 0 ? `${months}개월` : '';
+    
+        return `${yearText} ${monthText}`.trim();
+    }, [durationStart, durationEnd]);
 
     const Item = (
         <div className={styles.projectItem}>
@@ -39,7 +59,16 @@ export const ProjectItem: React.FC<Props> = ({
             >
                 <div>
                     <h3 className={styles.projectName}>{projectName}</h3>
-                    <p className={styles.duration}>{duration}</p>
+                    <p className={styles.duration}>
+                        <div>
+                            {durationStart}
+                            <span>~</span>
+                            {durationEnd}
+                        </div>
+                        <span className={styles.calculateDuration}>
+                            {calculateDuration}
+                        </span>
+                    </p>
                 </div>
                 <ul className={styles.description}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate felis vivamus facilisis ligula.</li>
