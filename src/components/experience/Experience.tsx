@@ -27,7 +27,7 @@ export const Experience: React.FC = () => {
         const monthText = months > 0 ? `${months}개월` : '';
     
         return `${yearText} ${monthText}`.trim();
-    }, []);
+    }, [t]);
 
     return (
         <section>

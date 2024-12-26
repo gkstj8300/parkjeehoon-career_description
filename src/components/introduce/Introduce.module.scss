@@ -20,10 +20,10 @@
 }
 
 .introduce {
-    display: flex;
-    padding-left: 1rem;
-    border-left: 1px solid #000;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	padding-left: 1rem;
+	border-left: 1px solid #000;
 }
 
 .updateWrap {
@@ -31,11 +31,11 @@
 }
 
 .lastUpdate {
+	font-weight: 600;
 	font-size: 80%;
-    font-weight: 600;
 }
 
 .updateDate {
-	font-size: 80%;
 	margin-left: 0.5rem;
+	font-size: 80%;
 }
