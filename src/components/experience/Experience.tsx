@@ -8,7 +8,7 @@ export const Experience: React.FC = () => {
     
     const { t } = useTranslation();
 
-    const calculateDuration = useMemo(() => {
+    const calculateDuration = () => {
         const durationStart = t('common.experience.naedam.durationStart');
         const durationEnd = t('common.experience.naedam.durationEnd');
 
@@ -26,12 +26,8 @@ export const Experience: React.FC = () => {
         const yearText = years > 0 ? `${years}년` : '';
         const monthText = months > 0 ? `${months}개월` : '';
         const duration = `${yearText} ${monthText}`.trim();
-        return (
-            <span className={styles.calculateDuration}>
-                {duration}123
-            </span>
-        );
-    }, [t]);
+        return duration;
+    };
 
     const experienceList = useMemo(() => {
         const experience = t('common.experience.experience');
@@ -53,7 +49,9 @@ export const Experience: React.FC = () => {
                                 <span>~</span>
                                 {t('common.experience.naedam.durationEnd')}
                             </div>
-                            {calculateDuration}
+                            <span className={styles.calculateDuration}>
+                                {calculateDuration()}
+                            </span>
                         </div>
                     </div>
                 </div>
