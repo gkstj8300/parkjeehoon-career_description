@@ -41,6 +41,7 @@
 }
 
 .duration {
+	padding-bottom: 10px;
 	font-size: 1rem;
 
 	span {
@@ -51,12 +52,16 @@
 .description {
 	list-style-position: inside;
 	list-style-type: disc;
-}
 
-.description li {
-	margin-bottom: 10px;
-	font-size: 14px;
-	line-height: 1.6;
+	li {
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+
+	&[data-even='false'] {
+		text-align: left;
+	}
 }
 
 .calculateDuration {

@@ -9,6 +9,7 @@ type Props = {
     durationStart: string,
     durationEnd: string,
     skillKeywords: string,
+    description: string,
 }
 
 export const ProjectItem: React.FC<Props> = ({
@@ -18,6 +19,7 @@ export const ProjectItem: React.FC<Props> = ({
     durationStart,
     durationEnd,
     skillKeywords,
+    description,
 }) => {
     const isEven = useMemo(() => 
         idx % 2 === 0
@@ -45,6 +47,10 @@ export const ProjectItem: React.FC<Props> = ({
         return `${yearText} ${monthText}`.trim();
     }, [durationStart, durationEnd]);
 
+    const descriptionList = useMemo(() => 
+        description.split('<br />').map(item => item.trim()
+    ), [description]);
+
     const Item = (
         <div className={styles.projectItem}>
             {isEven && (
@@ -59,7 +65,7 @@ export const ProjectItem: React.FC<Props> = ({
             >
                 <div>
                     <h3 className={styles.projectName}>{projectName}</h3>
-                    <p className={styles.duration}>
+                    <div className={styles.duration}>
                         <div>
                             {durationStart}
                             <span>~</span>
@@ -68,12 +74,12 @@ export const ProjectItem: React.FC<Props> = ({
                         <span className={styles.calculateDuration}>
                             {calculateDuration}
                         </span>
-                    </p>
+                    </div>
                 </div>
-                <ul className={styles.description}>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate felis vivamus facilisis ligula.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate felis vivamus facilisis ligula.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate felis vivamus facilisis ligula.</li>
+                <ul className={styles.description} data-even={isEven}>
+                    {descriptionList.map((description, idx) => 
+                        <li key={idx}>{description}</li>    
+                    )}
                     {skillList.map(skill => 
                         <Skill key={skill} skill={skill}/>
                     )}

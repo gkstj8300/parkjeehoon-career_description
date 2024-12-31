@@ -29,6 +29,11 @@ export const Experience: React.FC = () => {
         return `${yearText} ${monthText}`.trim();
     }, [t]);
 
+    const experienceList = useMemo(() => {
+        const experience = t('common.experience.experience');
+        return experience.split('<br />').map(item => item.trim())
+    }, [t]);
+
     return (
         <section>
             <Title title={t('common.experience.title')} />
@@ -38,7 +43,7 @@ export const Experience: React.FC = () => {
                     <img className={styles.companyImg} src={naedamLogoImg.src} alt="companyImg"/>
                     <div className={styles.companyWrap}>
                         <h4 className={styles.companyName}>{t('common.experience.naedam.name')}</h4>
-                        <p className={styles.duration}>
+                        <div className={styles.duration}>
                             <div>
                                 {t('common.experience.naedam.durationStart')}
                                 <span>~</span>
@@ -47,14 +52,14 @@ export const Experience: React.FC = () => {
                             <span className={styles.calculateDuration}>
                                 {calculateDuration}
                             </span>
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.divider}></div>
                 <ul className={styles.description}>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate felis vivamus facilisis ligula.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate felis vivamus facilisis ligula.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputate felis vivamus facilisis ligula.</li>
+                    {experienceList.map((experience, idx) => 
+                        <li key={idx}>{experience}</li>
+                    )}
                 </ul>
             </div>
         </section>

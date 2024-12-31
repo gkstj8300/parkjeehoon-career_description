@@ -12,6 +12,7 @@ type ProjectItem = {
     durationStart: string;
     durationEnd: string;
     skillKeywords: string;
+    description: string;
 };
 
 const projectData = [
@@ -30,6 +31,7 @@ export const Project: React.FC = () => {
         durationStart: t(`common.project.${key}.durationStart`),
         durationEnd: t(`common.project.${key}.durationEnd`),
         skillKeywords: t(`common.project.${key}.skillKeywords`),
+        description: t(`common.project.${key}.description`),
     }));
 
     return (
