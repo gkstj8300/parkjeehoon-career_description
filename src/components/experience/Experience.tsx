@@ -28,7 +28,7 @@ export const Experience: React.FC = () => {
         const duration = `${yearText} ${monthText}`.trim();
         return (
             <span className={styles.calculateDuration}>
-                {duration}
+                {duration}123
             </span>
         );
     }, [t]);
@@ -53,7 +53,7 @@ export const Experience: React.FC = () => {
                                 <span>~</span>
                                 {t('common.experience.naedam.durationEnd')}
                             </div>
-                            {calculateDuration}123
+                            {calculateDuration}
                         </div>
                     </div>
                 </div>
