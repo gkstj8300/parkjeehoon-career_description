@@ -25,8 +25,12 @@ export const Experience: React.FC = () => {
 
         const yearText = years > 0 ? `${years}년` : '';
         const monthText = months > 0 ? `${months}개월` : '';
-    
-        return `${yearText} ${monthText}`.trim();
+        const duration = `${yearText} ${monthText}`.trim();
+        return (
+            <span className={styles.calculateDuration}>
+                {duration}
+            </span>
+        );
     }, [t]);
 
     const experienceList = useMemo(() => {
@@ -49,9 +53,7 @@ export const Experience: React.FC = () => {
                                 <span>~</span>
                                 {t('common.experience.naedam.durationEnd')}
                             </div>
-                            <span className={styles.calculateDuration}>
-                                {calculateDuration}
-                            </span>
+                            {calculateDuration}123
                         </div>
                     </div>
                 </div>
