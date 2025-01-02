@@ -4,8 +4,8 @@ export const project: Translation = {
     title: 'Project',
     hanwha: {
         name: '한화생명 코어 프로젝트',
-        durationStart: '2022.06',
-        durationEnd: '2022.12',
+        durationStart: '2022-06',
+        durationEnd: '2022-12',
         skillKeywords: 'Java,Javascript,Servlet,Apache,Oracle,KendoUI,GitLab,JobPass,TeraStream,ETL',
         description: `레거시 청산 및 프론트엔드 신규 개발<br />
                       FP 수수료 지급 프로세스 ETL 배치 프로세스 개발<br />
@@ -14,8 +14,8 @@ export const project: Translation = {
     },
     naedam: {
         name: '내담C&C 사내 홈페이지 신규개발',
-        durationStart: '2022.12',
-        durationEnd: '2023.03',
+        durationStart: '2022-12',
+        durationEnd: '2023-03',
         skillKeywords: 'Java,Spring Boot,Javascript,Jquery,MariaDB,Servlet,Cafe24',
         description: `사내 홈페이지의 백엔드 및 프론트엔드 설계, 구현, 그리고 시스템 구축<br />
                       Neadam Admin 프로그램과의 연동 및 적용 작업 수행<br />
@@ -26,7 +26,7 @@ export const project: Translation = {
     },
     misumiMaintenance: {
         name: '한국미스미 프론트엔드 유지보수/운영',
-        durationStart: '2023.03',
+        durationStart: '2023-03',
         durationEnd: '2023-12',
         skillKeywords: 'Php,Rxjs,Twig,Javascript,Jquery,Ubuntu Linux,Docker,Apache,Nodejs,Xampp,Bitbucket,Jenkins',
         description: `신규 API의 설계, 적용 및 프론트엔드 개발<br />
@@ -38,7 +38,7 @@ export const project: Translation = {
     },
     misumiRenewal: {
         name: '한국미스미 리뉴얼 개발/유지보수/운영',
-        durationStart: '2024.03',
+        durationStart: '2024-03',
         durationEnd: '진행중',
         skillKeywords: 'React,TypeScript,Next.js,Redux,Nodejs,Sass,Vercel,Webpack,SWC,Babel,DataDog,GitHub Actions,Circleci',
         description: `PC 및 모바일 프론트엔드 리뉴얼 개발<br />

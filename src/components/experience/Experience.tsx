@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Experience.module.scss';
 import naedamLogoImg from './assets/neadam_logo.png';
@@ -7,15 +7,14 @@ import { Title } from '@/components/ui/title';
 export const Experience: React.FC = () => {
     
     const { t } = useTranslation();
-    const [duration, setDuration] = useState<string>();
 
-    const calculateDuration = () => {
+    const calculateDuration = useMemo(() => {
         const durationStart = t('common.experience.naedam.durationStart');
         const durationEnd = t('common.experience.naedam.durationEnd');
 
         const startDate = new Date(durationStart);
         const endDate = durationEnd === '재직중' ? new Date() : new Date(durationEnd);
-    
+
         let years = endDate.getFullYear() - startDate.getFullYear();
         let months = endDate.getMonth() - startDate.getMonth();
     
@@ -27,16 +26,13 @@ export const Experience: React.FC = () => {
         const yearText = years > 0 ? `${years}년` : '';
         const monthText = months > 0 ? `${months}개월` : '';
         const duration = `${yearText} ${monthText}`.trim();
-        setDuration(duration);
-    };
+
+        return duration;
+    }, [t]);
 
     const experienceList = useMemo(() => {
         const experience = t('common.experience.experience');
         return experience.split('<br />').map(item => item.trim())
-    }, [t]);
-
-    useEffect(() => {
-        calculateDuration();
     }, [t]);
 
     return (
@@ -55,7 +51,7 @@ export const Experience: React.FC = () => {
                                 {t('common.experience.naedam.durationEnd')}
                             </div>
                             <span className={styles.calculateDuration}>
-                                {duration}
+                                {calculateDuration}
                             </span>
                         </div>
                     </div>
