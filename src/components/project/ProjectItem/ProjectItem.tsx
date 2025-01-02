@@ -58,6 +58,9 @@ export const ProjectItem: React.FC<Props> = ({
     useOnMounted(() => {
         calculateDuration();
     });
+    
+    // eslint-disable-next-line no-console
+    console.log('duration 체크', duration);
 
     const Item = (
         <div className={styles.projectItem}>
