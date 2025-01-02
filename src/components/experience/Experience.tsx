@@ -1,9 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Experience.module.scss';
 import naedamLogoImg from './assets/neadam_logo.png';
 import { Title } from '@/components/ui/title';
-import { useOnMounted } from '@/hooks/useOnMounted';
 
 export const Experience: React.FC = () => {
     
@@ -36,9 +35,9 @@ export const Experience: React.FC = () => {
         return experience.split('<br />').map(item => item.trim())
     }, [t]);
 
-    useOnMounted(() => {
+    useEffect(() => {
         calculateDuration();
-    });
+    }, [t]);
 
     return (
         <section>
