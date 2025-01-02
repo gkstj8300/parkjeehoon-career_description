@@ -1,12 +1,14 @@
-import { useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Experience.module.scss';
 import naedamLogoImg from './assets/neadam_logo.png';
 import { Title } from '@/components/ui/title';
+import { useOnMounted } from '@/hooks/useOnMounted';
 
 export const Experience: React.FC = () => {
     
     const { t } = useTranslation();
+    const [duration, setDuration] = useState<string>();
 
     const calculateDuration = () => {
         const durationStart = t('common.experience.naedam.durationStart');
@@ -26,13 +28,17 @@ export const Experience: React.FC = () => {
         const yearText = years > 0 ? `${years}년` : '';
         const monthText = months > 0 ? `${months}개월` : '';
         const duration = `${yearText} ${monthText}`.trim();
-        return duration;
+        setDuration(duration);
     };
 
     const experienceList = useMemo(() => {
         const experience = t('common.experience.experience');
         return experience.split('<br />').map(item => item.trim())
     }, [t]);
+
+    useOnMounted(() => {
+        calculateDuration();
+    });
 
     return (
         <section>
@@ -50,7 +56,7 @@ export const Experience: React.FC = () => {
                                 {t('common.experience.naedam.durationEnd')}
                             </div>
                             <span className={styles.calculateDuration}>
-                                {calculateDuration()}
+                                {duration}
                             </span>
                         </div>
                     </div>

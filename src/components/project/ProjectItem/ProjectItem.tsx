@@ -1,6 +1,7 @@
-import { useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import styles from './ProjectItem.module.scss';
 import { Skill } from '@/components/project/Skill';
+import { useOnMounted } from '@/hooks/useOnMounted';
 
 type Props = {
     idx: number,
@@ -21,6 +22,9 @@ export const ProjectItem: React.FC<Props> = ({
     skillKeywords,
     description,
 }) => {
+
+    const [duration, setDuration] = useState<string>();
+
     const isEven = useMemo(() => 
         idx % 2 === 0
     , [idx]);
@@ -29,7 +33,7 @@ export const ProjectItem: React.FC<Props> = ({
         skillKeywords.split(',')
     , [skillKeywords]);
 
-    const calculateDuration = useMemo(() => {
+    const calculateDuration = () => {
         const startDate = new Date(durationStart);
         const endDate = durationEnd === '진행중' ? new Date() : new Date(durationEnd);
     
@@ -43,13 +47,17 @@ export const ProjectItem: React.FC<Props> = ({
 
         const yearText = years > 0 ? `${years}년` : '';
         const monthText = months > 0 ? `${months}개월` : '';
-    
-        return `${yearText} ${monthText}`.trim();
-    }, [durationStart, durationEnd]);
+        const duration = `${yearText} ${monthText}`.trim();
+        setDuration(duration);
+    };
 
     const descriptionList = useMemo(() => 
         description.split('<br />').map(item => item.trim()
     ), [description]);
+
+    useOnMounted(() => {
+        calculateDuration();
+    });
 
     const Item = (
         <div className={styles.projectItem}>
@@ -72,7 +80,7 @@ export const ProjectItem: React.FC<Props> = ({
                             {durationEnd}
                         </div>
                         <span className={styles.calculateDuration}>
-                            {calculateDuration}
+                            {duration}
                         </span>
                     </div>
                 </div>
