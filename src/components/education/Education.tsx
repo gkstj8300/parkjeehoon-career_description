@@ -21,15 +21,15 @@ export const Education: React.FC = () => {
     ];
 
     const educations: EducationProps[] = educationKeys.map((key) => ({
-        name: t(`common.education.${key}.name`),
-        major: t(`common.education.${key}.major`),
-        durationStart: t(`common.education.${key}.durationStart`),
-        durationEnd: t(`common.education.${key}.durationEnd`),
+        name: t(`component.ui.education.${key}.name`),
+        major: t(`component.ui.education.${key}.major`),
+        durationStart: t(`component.ui.education.${key}.durationStart`),
+        durationEnd: t(`component.ui.education.${key}.durationEnd`),
     }));
 
     return (
         <section>
-            <Title title={t('common.education.title')} />
+            <Title title={t('component.ui.education.title')} />
             <div className={styles.education}>
                 {educations.map((item, index) => (
                     <EducationItem key={index} {...item} />

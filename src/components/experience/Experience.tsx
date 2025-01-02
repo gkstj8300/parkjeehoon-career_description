@@ -9,8 +9,8 @@ export const Experience: React.FC = () => {
     const { t } = useTranslation();
 
     const calculateDuration = useMemo(() => {
-        const durationStart = t('common.experience.naedam.durationStart');
-        const durationEnd = t('common.experience.naedam.durationEnd');
+        const durationStart = t('component.ui.experience.naedam.durationStart');
+        const durationEnd = t('component.ui.experience.naedam.durationEnd');
 
         const startDate = new Date(durationStart);
         const endDate = durationEnd === '재직중' ? new Date() : new Date(durationEnd);
@@ -31,24 +31,24 @@ export const Experience: React.FC = () => {
     }, [t]);
 
     const experienceList = useMemo(() => {
-        const experience = t('common.experience.experience');
+        const experience = t('component.ui.experience.experience');
         return experience.split('<br />').map(item => item.trim())
     }, [t]);
 
     return (
         <section>
-            <Title title={t('common.experience.title')} />
+            <Title title={t('component.ui.experience.title')} />
             <div className={styles.experience}>
                 <div className={styles.details}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className={styles.companyImg} src={naedamLogoImg.src} alt="companyImg"/>
                     <div className={styles.companyWrap}>
-                        <h4 className={styles.companyName}>{t('common.experience.naedam.name')}</h4>
+                        <h4 className={styles.companyName}>{t('component.ui.experience.naedam.name')}</h4>
                         <div className={styles.duration}>
                             <div>
-                                {t('common.experience.naedam.durationStart')}
+                                {t('component.ui.experience.naedam.durationStart')}
                                 <span>~</span>
-                                {t('common.experience.naedam.durationEnd')}
+                                {t('component.ui.experience.naedam.durationEnd')}
                             </div>
                             <span className={styles.calculateDuration}>
                                 {calculateDuration}

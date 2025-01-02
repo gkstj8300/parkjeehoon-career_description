@@ -9,31 +9,31 @@ export const AboutMe: React.FC = () => {
 
     return (
         <section>
-            <Title title={t('common.aboutMe.title')} />
+            <Title title={t('component.ui.aboutMe.title')} />
             <div className={styles.aboutMeWrap}>
                 <div className={styles.introduction}>
                     <h2>
-                        <Trans>{t('common.aboutMe.introduction')}</Trans>
+                        <Trans>{t('component.ui.aboutMe.introduction')}</Trans>
                     </h2>
                     <ul className={styles.description}>
                         <li>
                             <i className={styles.phoneIcon}></i>
-                            <p>{t('common.aboutMe.phone')}</p>
+                            <p>{t('component.ui.aboutMe.phone')}</p>
                         </li>
                         <li>
                             <i className={styles.emailIcon}></i>
-                            <p>{t('common.aboutMe.email')}</p>
+                            <p>{t('component.ui.aboutMe.email')}</p>
                         </li>
                         <li>
                             <i className={styles.githubIcon}></i>
-                            <a href={t('common.aboutMe.github')} target="_blank">
-                                {t('common.aboutMe.github')}
+                            <a href={t('component.ui.aboutMe.github')} target="_blank">
+                                {t('component.ui.aboutMe.github')}
                             </a>
                         </li>
                         <li>
                             <i className={styles.blogIcon}></i>
-                            <a href={t('common.aboutMe.blog')} target="_blank">
-                                {t('common.aboutMe.blog')}
+                            <a href={t('component.ui.aboutMe.blog')} target="_blank">
+                                {t('component.ui.aboutMe.blog')}
                             </a>
                         </li>
                     </ul>

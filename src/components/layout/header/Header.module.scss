@@ -22,3 +22,9 @@
 		height: 5rem;
 	}
 }
+
+@media (max-width: 530px) {
+	.header {
+		padding: 10px;
+	}
+}

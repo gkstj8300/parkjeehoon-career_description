@@ -26,17 +26,17 @@ export const Project: React.FC = () => {
     const { t } = useTranslation();
 
     const projects: ProjectItem[] = projectData.map(({ key, logoImg }) => ({
-        projectName: t(`common.project.${key}.name`),
+        projectName: t(`component.ui.project.${key}.name`),
         logoImg,
-        durationStart: t(`common.project.${key}.durationStart`),
-        durationEnd: t(`common.project.${key}.durationEnd`),
-        skillKeywords: t(`common.project.${key}.skillKeywords`),
-        description: t(`common.project.${key}.description`),
+        durationStart: t(`component.ui.project.${key}.durationStart`),
+        durationEnd: t(`component.ui.project.${key}.durationEnd`),
+        skillKeywords: t(`component.ui.project.${key}.skillKeywords`),
+        description: t(`component.ui.project.${key}.description`),
     }));
 
     return (
         <section>
-            <Title title={t('common.project.title')} />
+            <Title title={t('component.ui.project.title')} />
             <div className={styles.projects}>
                 {projects.map((item, index) => (
                     <ProjectItem

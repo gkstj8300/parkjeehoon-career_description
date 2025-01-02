@@ -8,17 +8,17 @@ export const Introduce: React.FC = () => {
         <section>
             <div className={styles.container}>
                 <h1 className={styles.title}>
-                    {t('common.introduce.title')}
+                    {t('component.ui.introduce.title')}
                 </h1>
                 <div className={styles.introduce}>
                     <div>
                         <Trans>
-                            {t('common.introduce.introduce')}
+                            {t('component.ui.introduce.introduce')}
                         </Trans>
                     </div>
                     <div className={styles.updateWrap}>
                         <small className={styles.lastUpdate}>
-                            {t('common.introduce.updateDate')}
+                            {t('component.ui.introduce.updateDate')}
                         </small>
                         <span className={styles.updateDate}>2024.12.26</span>
                     </div>
