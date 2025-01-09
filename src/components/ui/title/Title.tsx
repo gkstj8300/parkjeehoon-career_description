@@ -12,9 +12,9 @@ export const Title: React.FC<props> = ({
     return (
         <div className={styles.container}>
             <div className={styles.line}></div>
-                <h1 className={styles.title}>
+                <h3 className={styles.title}>
                     {title}
-                </h1>
+                </h3>
             <div className={styles.line}></div>
         </div>
     )

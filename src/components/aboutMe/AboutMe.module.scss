@@ -5,16 +5,28 @@
 
 .introduction {
 	line-height: 1.15;
+	
+	> h2 {
+		color: #717171;
+		> i {
+			color: #000000;
+			font-style:normal;
+		}
+	}
+}
+
+.profileWrap {
+	display: flex;
+	align-items: center;
 }
 
 .profileImg {
-	height: 250px;
+	height: 267.5px;
 	border-radius: 20px;
 }
 
 .description {
-	margin-left: 1.5rem;
-	padding-top: 1rem;
+	padding-top: 35px;
 	list-style-type: disc;
 
 	li {
@@ -30,11 +42,11 @@
 	}
 
 	p {
-		margin-left: 10px;
+		margin-left: 12px;
 	}
 
 	a {
-		margin-left: 10px;
+		margin-left: 12px;
 	}
 
 	a:hover {

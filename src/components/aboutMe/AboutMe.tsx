@@ -17,12 +17,12 @@ export const AboutMe: React.FC = () => {
                     </h2>
                     <ul className={styles.description}>
                         <li>
-                            <i className={styles.phoneIcon}></i>
-                            <p>{t('component.ui.aboutMe.phone')}</p>
+                            <i className={styles.emailIcon}></i>
+                            <a href={t('component.ui.aboutMe.email')}>{t('component.ui.aboutMe.email')}</a>
                         </li>
                         <li>
-                            <i className={styles.emailIcon}></i>
-                            <p>{t('component.ui.aboutMe.email')}</p>
+                            <i className={styles.phoneIcon}></i>
+                            <p>{t('component.ui.aboutMe.phone')}</p>
                         </li>
                         <li>
                             <i className={styles.githubIcon}></i>
@@ -38,7 +38,7 @@ export const AboutMe: React.FC = () => {
                         </li>
                     </ul>
                 </div>
-                <div className={styles.progileWrap}>
+                <div className={styles.profileWrap}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className={styles.profileImg} src={profileImg.src} alt="profileImg"/>
                 </div>
