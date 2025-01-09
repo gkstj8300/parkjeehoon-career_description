@@ -1,0 +1,12 @@
+@font-face {
+	font-weight: normal;
+	font-family: 'NotoSansKR';
+	src: url(./NotoSansKR-SemiBold.ttf) format('truetype');
+	font-display: swap;
+}
+@font-face {
+	font-weight: bold;
+	font-family: 'otoSansKR_Bold';
+	src: url(./NotoSansKR-Bold.ttf) format('truetype');
+	font-display: swap;
+}
