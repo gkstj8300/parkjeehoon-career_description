@@ -11,18 +11,19 @@ export const Introduce: React.FC = () => {
                     {t('component.ui.introduce.title')}
                 </h1>
                 <div className={styles.introduce}>
-                    <div>
+                    <p>
                         <Trans>
                             {t('component.ui.introduce.introduce')}
                         </Trans>
-                    </div>
-                    <div className={styles.updateWrap}>
-                        <small className={styles.lastUpdate}>
-                            {t('component.ui.introduce.updateDate')}
-                        </small>
-                        <span className={styles.updateDate}>2024.12.26</span>
-                    </div>
+                    </p>
                 </div>
+            </div>
+            
+            <div className={styles.footer}>
+                <small className={styles.lastUpdate}>
+                    {t('component.ui.introduce.updateDate')}
+                </small>
+                <span className={styles.updateDate}>2024.12.26</span>
             </div>
         </section>
     )

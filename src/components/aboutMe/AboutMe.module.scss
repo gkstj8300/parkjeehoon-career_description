@@ -7,10 +7,10 @@
 	line-height: 1.15;
 	
 	> h2 {
-		color: #717171;
+		color: var(--color-text-secondary);
 		> i {
-			color: #000000;
-			font-style:normal;
+			color: var(--color-text-primary);
+			font-style: normal;
 		}
 	}
 }

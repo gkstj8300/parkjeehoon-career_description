@@ -22,8 +22,18 @@
 .introduce {
 	display: flex;
 	flex-direction: column;
-	padding-left: 1rem;
-	border-left: 1px solid #000;
+	padding: 20px 0px 20px 20px;
+	border-left: 1px solid var(--color-border-secondary);
+	
+	> p {
+		line-height: 1.6;
+	}
+}
+
+.footer {
+	display: flex;
+	align-content: center;
+	float: right;
 }
 
 .updateWrap {
@@ -36,7 +46,7 @@
 }
 
 .updateDate {
-	margin-left: 0.5rem;
+	padding-left: 6px;
 	font-size: 80%;
 }
 
