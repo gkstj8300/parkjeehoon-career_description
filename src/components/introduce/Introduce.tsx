@@ -7,9 +7,9 @@ export const Introduce: React.FC = () => {
     return (
         <section>
             <div className={styles.container}>
-                <h1 className={styles.title}>
+                <h3 className={styles.title}>
                     {t('component.ui.introduce.title')}
-                </h1>
+                </h3>
                 <div className={styles.introduce}>
                     <p>
                         <Trans>
