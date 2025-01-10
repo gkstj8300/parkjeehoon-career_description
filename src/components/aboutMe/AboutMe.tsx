@@ -1,11 +1,18 @@
+import React, { useCallback } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './AboutMe.module.scss';
 import profileImg from '@/components/aboutMe/assets/profile.jpg';
 import { Title } from '@/components/ui/title';
+import { tractEvent } from '@/logs/googleAnalytics/event';
+
+const ACTION_CLICK = 'click';
 
 export const AboutMe: React.FC = () => {
-
     const { t } = useTranslation();
+
+    const handleLinkClick = useCallback((label: string) => {
+        tractEvent({ action: ACTION_CLICK, category: 'AboutMe', label })
+    }, []);
 
     return (
         <section>
@@ -26,13 +33,21 @@ export const AboutMe: React.FC = () => {
                         </li>
                         <li>
                             <i className={styles.githubIcon}></i>
-                            <a href={t('component.ui.aboutMe.github')} target="_blank">
+                            <a 
+                                href={t('component.ui.aboutMe.github')} 
+                                target="_blank"
+                                onClick={() => handleLinkClick('github')}
+                            >
                                 {t('component.ui.aboutMe.github')}
                             </a>
                         </li>
                         <li>
                             <i className={styles.blogIcon}></i>
-                            <a href={t('component.ui.aboutMe.blog')} target="_blank">
+                            <a 
+                                href={t('component.ui.aboutMe.blog')} 
+                                target="_blank"
+                                onClick={() => handleLinkClick('blog')}
+                            >
                                 {t('component.ui.aboutMe.blog')}
                             </a>
                         </li>
