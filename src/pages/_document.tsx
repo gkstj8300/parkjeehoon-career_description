@@ -3,12 +3,13 @@ import RawDocument, { Head, Html, Main, NextScript } from 'next/document';
 class Document extends RawDocument {
     render() {
         return (
-            <Html lang="ko">
+            <Html>
 				<Head>
                     <link rel="icon" href="/favicon.ico" />
-                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-                    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+					<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+					<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+					<meta httpEquiv="content-style-type" content="text/css" />
+					<meta httpEquiv="content-script-type" content="text/javascript" />
 				</Head>
                 <body>
                     <Main />

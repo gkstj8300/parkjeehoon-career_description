@@ -10,6 +10,7 @@ import { resources } from '@/i18n/resources';
 
 const translations: Record<string, string> = flat({
 	...resources.ko.translation,
+	...resources.en.translation,
 });
 
 const foundKeys: Record<string, true> = {};

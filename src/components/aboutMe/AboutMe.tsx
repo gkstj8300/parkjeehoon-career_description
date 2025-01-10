@@ -1,11 +1,24 @@
+import i18n from 'i18next';
+import React, { useCallback, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styles from './AboutMe.module.scss';
 import profileImg from '@/components/aboutMe/assets/profile.jpg';
 import { Title } from '@/components/ui/title';
+import { tractEvent } from '@/logs/googleAnalytics/event';
+
+const ACTION_CLICK = 'click';
 
 export const AboutMe: React.FC = () => {
-
     const { t } = useTranslation();
+    const [isHover, setIsHover] = useState(false);
+
+    const handleLinkClick = useCallback((label: string) => {
+        tractEvent({ action: ACTION_CLICK, category: 'AboutMe', label })
+    }, []);
+
+    const handleLocaleChageClick = useCallback((locale: string) => {
+        i18n.changeLanguage(locale);
+    }, []);
 
     return (
         <section>
@@ -24,17 +37,55 @@ export const AboutMe: React.FC = () => {
                             <i className={styles.phoneIcon}></i>
                             <p>{t('component.ui.aboutMe.phone')}</p>
                         </li>
-                        <li>
+                        <li className={styles.list}>
                             <i className={styles.githubIcon}></i>
-                            <a href={t('component.ui.aboutMe.github')} target="_blank">
+                            <a
+                                className={styles.iconLink}
+                                href={t('component.ui.aboutMe.github')} 
+                                target="_blank"
+                                onClick={() => handleLinkClick('github')}
+                            >
                                 {t('component.ui.aboutMe.github')}
                             </a>
                         </li>
-                        <li>
+                        <li className={styles.list}>
                             <i className={styles.blogIcon}></i>
-                            <a href={t('component.ui.aboutMe.blog')} target="_blank">
+                            <a
+                                className={styles.iconLink}
+                                href={t('component.ui.aboutMe.blog')} 
+                                target="_blank"
+                                onClick={() => handleLinkClick('blog')}
+                            >
                                 {t('component.ui.aboutMe.blog')}
                             </a>
+                        </li>
+                        <li className={styles.localList}>
+                            <i 
+                                className={styles.localeIcon}
+                                onMouseOver={() => setIsHover(true)}
+                            ></i>
+                            <div 
+                                className={styles.localeWrap}
+                                data-hover={isHover}
+                                onMouseLeave={() => setIsHover(false)}
+                            >
+                                <ul>
+                                    <li>
+                                        <a 
+                                            className={styles.localeLink} 
+                                            href="#"
+                                            onClick={() => handleLocaleChageClick('ko')}
+                                        >KOR</a>
+                                    </li>
+                                    <li>
+                                        <a 
+                                            className={styles.localeLink} 
+                                            href="#"
+                                            onClick={() => handleLocaleChageClick('en')}
+                                        >ENG</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>

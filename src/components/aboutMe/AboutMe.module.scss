@@ -29,9 +29,16 @@
 	padding-top: 35px;
 	list-style-type: disc;
 
-	li {
+	.list {
 		display: flex;
 		align-items: center;
+		line-height: 2.0rem;
+		list-style-type: none;
+	}
+
+	.localList {
+		display: flex;
+		align-items: flex-start;
 		line-height: 2.0rem;
 		list-style-type: none;
 	}
@@ -44,12 +51,13 @@
 	p {
 		margin-left: 12px;
 	}
+}
 
 	a {
 		margin-left: 12px;
 	}
 
-	a:hover {
+	&:hover {
 		color: #aeaeae;
 	}
 }
@@ -76,6 +84,42 @@
 	background-image: url(./assets/blogIcon.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.localeIcon {
+	width: 32px !important;
+	height: 33px !important;
+	background-image: url(./assets/locale.svg);
+	background-repeat: no-repeat;
+	background-position-x: -4px;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.localeWrap {
+	top: 29rem;
+	left: 15rem;
+	z-index: 1;
+	padding: 8px 24px;
+	background-color: #fff;
+	border: 1px solid #e6e6e6;
+	border-radius: 8px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s ease-out;
+
+	li {
+		list-style-type: none;
+	}
+
+	&[data-hover='true'] {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.localeLink {
+	margin-left: 0;
 }
 
 @media (max-width: 530px) {
