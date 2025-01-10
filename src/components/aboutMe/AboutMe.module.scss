@@ -34,6 +34,10 @@
 		align-items: center;
 		line-height: 2.0rem;
 		list-style-type: none;
+
+		a {
+			margin-left: 12px;
+		}
 	}
 
 	.localList {
@@ -51,11 +55,11 @@
 	p {
 		margin-left: 12px;
 	}
+
 }
 
-	a {
-		margin-left: 12px;
-	}
+.iconLink {
+	margin-left: 0px;
 
 	&:hover {
 		color: #aeaeae;

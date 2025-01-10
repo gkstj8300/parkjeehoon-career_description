@@ -29,11 +29,11 @@ export const AboutMe: React.FC = () => {
                         <Trans>{t('component.ui.aboutMe.introduction')}</Trans>
                     </h2>
                     <ul className={styles.description}>
-                        <li>
+                        <li className={styles.list}>
                             <i className={styles.emailIcon}></i>
                             <a href={t('component.ui.aboutMe.email')}>{t('component.ui.aboutMe.email')}</a>
                         </li>
-                        <li>
+                        <li className={styles.list}>
                             <i className={styles.phoneIcon}></i>
                             <p>{t('component.ui.aboutMe.phone')}</p>
                         </li>
