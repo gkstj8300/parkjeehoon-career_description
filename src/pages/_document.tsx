@@ -3,7 +3,7 @@ import RawDocument, { Head, Html, Main, NextScript } from 'next/document';
 class Document extends RawDocument {
     render() {
         return (
-            <Html lang="ko">
+            <Html>
 				<Head>
                     <link rel="icon" href="/favicon.ico" />
 					<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
