@@ -1,11 +1,33 @@
 .aboutMeWrap {
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 530px) {
+		flex-direction: column;
+	}
+}
+
+.introduction {
+	line-height: 1.15;
+
+	h2 {
+		color: var(--color-text-secondary);
+
+		i {
+			color: var(--color-text-primary);
+			font-style: normal;
+		}
+	}
 }
 
 .profileWrap {
 	display: flex;
 	align-items: center;
+
+	@media (max-width: 530px) {
+		padding-top: 1rem;
+		text-align: center;
+	}
 }
 
 .profileImg {
@@ -20,7 +42,7 @@
 	.list {
 		display: flex;
 		align-items: center;
-		line-height: 2.0rem;
+		line-height: 2rem;
 		list-style-type: none;
 
 		a {
@@ -28,23 +50,8 @@
 		}
 	}
 
-	i {
-		width: 1.5rem;
-		height: 1.5rem;
-		color: var(--color-text-primary);
-		font-style: normal;
-	}
-
 	p {
 		margin-left: 12px;
-	}
-}
-
-.introduction {
-	line-height: 1.15;
-	
-	> h2 {
-		color: var(--color-text-secondary);
 	}
 }
 
@@ -56,37 +63,29 @@
 	}
 }
 
-.phoneIcon {
-	background-image: url(./assets/phoneIcon.png);
+@mixin icon() {
+	width: 1.5rem;
+	height: 1.5rem;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.phoneIcon {
+	@include icon;
+	background-image: url(./assets/phoneIcon.png);
 }
 
 .emailIcon {
+	@include icon;
 	background-image: url(./assets/emailIcon.png);
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 .githubIcon {
+	@include icon;
 	background-image: url(./assets/githubIcon.png);
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 .blogIcon {
+	@include icon;
 	background-image: url(./assets/blogIcon.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-@media (max-width: 530px) {
-	.aboutMeWrap {
-		flex-direction: column;
-	}
-
-	.progileWrap {
-		padding-top: 1rem;
-		text-align: center;
-	}
 }
