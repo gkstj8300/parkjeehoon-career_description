@@ -1,4 +1,4 @@
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import styles from './Project.module.scss';
 import { ProjectItem } from './ProjectItem';
 import hanwhaLogo from './assets/hanwhaLogo.png';
