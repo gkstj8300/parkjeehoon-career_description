@@ -3,7 +3,8 @@ import { Translation } from '@/i18n/types';
 export const project: Translation = {
     title: 'Project',
     hanwha: {
-        name: '한화생명 코어 프로젝트',
+        name: '한화생명',
+        projectName: '코어 프로젝트',
         durationStart: '2022-06',
         durationEnd: '2022-12',
         skillKeywords: 'Java,Javascript,Servlet,Apache,Oracle,KendoUI,GitLab,JobPass,TeraStream,ETL',
@@ -13,7 +14,8 @@ export const project: Translation = {
                       인터페이스 실행 및 데이터 검증`,
     },
     naedam: {
-        name: '내담C&C 사내 홈페이지 신규개발',
+        name: '내담C&C',
+        projectName: '사내 홈페이지 신규개발',
         durationStart: '2022-12',
         durationEnd: '2023-03',
         skillKeywords: 'Java,Spring Boot,Javascript,Jquery,MariaDB,Servlet,Cafe24',
@@ -25,7 +27,8 @@ export const project: Translation = {
                       한글/영문 페이지의 동시 구축 및 다국어 지원 구현`
     },
     misumiMaintenance: {
-        name: '한국미스미 프론트엔드 유지보수/운영',
+        name: '한국미스미',
+        projectName: '프론트엔드 유지보수/운영',
         durationStart: '2023-03',
         durationEnd: '2023-12',
         skillKeywords: 'Php,Rxjs,Twig,Javascript,Jquery,Ubuntu Linux,Docker,Apache,Nodejs,Xampp,Bitbucket,Jenkins',
@@ -37,7 +40,8 @@ export const project: Translation = {
                       상품 추천 기능 개발 및 프론트엔드 인터페이스 구현`,
     },
     misumiRenewal: {
-        name: '한국미스미 리뉴얼 개발/유지보수/운영',
+        name: '한국미스미',
+        projectName: '리뉴얼 개발/유지보수/운영',
         durationStart: '2024-03',
         durationEnd: '진행중',
         skillKeywords: 'React,TypeScript,Next.js,Redux,Nodejs,Sass,Vercel,Webpack,SWC,Babel,DataDog,GitHub Actions,Circleci',

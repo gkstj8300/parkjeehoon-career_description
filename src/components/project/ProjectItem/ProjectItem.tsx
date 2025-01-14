@@ -4,6 +4,7 @@ import { Skill } from '@/components/project/Skill';
 
 type Props = {
     idx: number,
+    name: string,
     projectName: string,
     logoImg: string,
     durationStart: string,
@@ -14,6 +15,7 @@ type Props = {
 
 export const ProjectItem: React.FC<Props> = ({
     idx,
+    name,
     projectName,
     logoImg,
     durationStart,
@@ -65,6 +67,7 @@ export const ProjectItem: React.FC<Props> = ({
                 data-even={isEven}
             >
                 <div>
+                    <h3 className={styles.name}>{name}</h3>
                     <h3 className={styles.projectName}>{projectName}</h3>
                     <div className={styles.duration}>
                         <div>

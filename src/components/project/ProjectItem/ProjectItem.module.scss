@@ -40,10 +40,17 @@
 	object-fit: contain;
 }
 
-.projectName {
+.name {
 	margin: 5px 0;
 	font-weight: 600;
 	font-size: 1.5rem;
+	line-height: 0.8rem;
+}
+
+.projectName {
+	margin: 5px 0;
+	font-weight: 600;
+	font-size: 1.4rem;
 	line-height: 2rem;
 }
 

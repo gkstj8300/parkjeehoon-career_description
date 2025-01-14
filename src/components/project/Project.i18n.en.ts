@@ -3,7 +3,8 @@ import { Translation } from '@/i18n/types';
 export const project: Translation = {
     title: 'Project',
     hanwha: {
-        name: 'Hanwha Life Core Project',
+        name: 'Hanwha Life',
+        projectName: 'Core Project',
         durationStart: '2022-06',
         durationEnd: '2022-12',
         skillKeywords: 'Java, JavaScript, Servlet, Apache, Oracle, KendoUI, GitLab, JobPass, TeraStream, ETL',
@@ -13,7 +14,8 @@ export const project: Translation = {
                       Interface execution and data verification`,
     },
     naedam: {
-        name: 'Naedam C&C In-house Homepage Development',
+        name: 'Naedam C&C',
+        projectName: 'In-house Homepage Development',
         durationStart: '2022-12',
         durationEnd: '2023-03',
         skillKeywords: 'Java, Spring Boot, JavaScript, jQuery, MariaDB, Servlet, Cafe24',
@@ -25,7 +27,8 @@ export const project: Translation = {
                       Simultaneous construction of Korean/English pages and implementation of multilingual support`
     },
     misumiMaintenance: {
-        name: 'Misumi Korea Frontend Maintenance/Operations',
+        name: 'Misumi Korea',
+        projectName: 'Frontend Maintenance/Operations',
         durationStart: '2023-03',
         durationEnd: '2023-12',
         skillKeywords: 'PHP, RxJS, Twig, JavaScript, jQuery, Ubuntu Linux, Docker, Apache, Node.js, XAMPP, Bitbucket, Jenkins',
@@ -37,7 +40,8 @@ export const project: Translation = {
                       Development of product recommendation feature and frontend interface implementation`,
     },
     misumiRenewal: {
-        name: 'Misumi Korea Renewal Development/Maintenance/Operations',
+        name: 'Misumi Korea',
+        projectName: 'Renewal Development/Maintenance/Operations',
         durationStart: '2024-03',
         durationEnd: '진행중',
         skillKeywords: 'React, TypeScript, Next.js, Redux, Node.js, Sass, Vercel, Webpack, SWC, Babel, DataDog, GitHub Actions, CircleCI',

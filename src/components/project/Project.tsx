@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import styles from './Project.module.scss';
 import { ProjectItem } from './ProjectItem';
 import hanwhaLogo from './assets/hanwhaLogo.png';
@@ -7,6 +7,7 @@ import naedamLogo from './assets/naedamLogo.jpg';
 import { Title } from '@/components/ui/title';
 
 type ProjectItem = {
+    name: string;
     projectName: string;
     logoImg: string;
     durationStart: string;
@@ -26,7 +27,8 @@ export const Project: React.FC = () => {
     const { t } = useTranslation();
 
     const projects: ProjectItem[] = projectData.map(({ key, logoImg }) => ({
-        projectName: t(`component.ui.project.${key}.name`),
+        name: t(`component.ui.project.${key}.name`),
+        projectName: t(`component.ui.project.${key}.projectName`),
         logoImg,
         durationStart: t(`component.ui.project.${key}.durationStart`),
         durationEnd: t(`component.ui.project.${key}.durationEnd`),
