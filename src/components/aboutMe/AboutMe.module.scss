@@ -16,6 +16,8 @@
 		i {
 			color: var(--color-text-primary);
 			font-style: normal;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 	}
 }
@@ -26,7 +28,7 @@
 
 	@media (max-width: 530px) {
 		padding-top: 1rem;
-		text-align: center;
+		justify-content: center;
 	}
 }
 
