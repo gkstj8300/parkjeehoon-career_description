@@ -1,10 +1,9 @@
 import i18n from 'i18next';
 import React, { useState, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import styles from './Header.module.scss';
 
 export const Header: React.FC = () => {
-    const { t } = useTranslation();
+
     const [isHover, setIsHover] = useState(false);
 
     const handleLocaleChageClick = useCallback((locale: string) => {

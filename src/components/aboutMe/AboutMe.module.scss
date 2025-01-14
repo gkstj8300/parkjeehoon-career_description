@@ -3,18 +3,6 @@
 	justify-content: space-between;
 }
 
-.introduction {
-	line-height: 1.15;
-	
-	> h2 {
-		color: var(--color-text-secondary);
-		> i {
-			color: var(--color-text-primary);
-			font-style: normal;
-		}
-	}
-}
-
 .profileWrap {
 	display: flex;
 	align-items: center;
@@ -43,16 +31,25 @@
 	i {
 		width: 1.5rem;
 		height: 1.5rem;
+		color: var(--color-text-primary);
+		font-style: normal;
 	}
 
 	p {
 		margin-left: 12px;
 	}
+}
 
+.introduction {
+	line-height: 1.15;
+	
+	> h2 {
+		color: var(--color-text-secondary);
+	}
 }
 
 .iconLink {
-	margin-left: 0px;
+	margin-left: 0;
 
 	&:hover {
 		color: #aeaeae;
