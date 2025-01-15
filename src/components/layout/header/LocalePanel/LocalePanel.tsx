@@ -20,7 +20,7 @@ const LocaleLink: React.FC<LocaleProps> = ({
     label, 
     onClick 
 }) => (
-    <li>
+    <li className={styles.link}>
         <a
             className={styles.localeLink}
             href="#"

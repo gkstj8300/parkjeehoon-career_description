@@ -8,9 +8,14 @@
 	line-height: 1.6;
 	text-align: center;
 	border: 1px solid #a7a7a7;
+}
 
-	li {
-		list-style-type: none;
+.link {
+	list-style-type: none;
+	
+	&:hover {
+		filter: drop-shadow(2px 5px 7px #757575);
+		transition: 0.1s;
 	}
 }
 
