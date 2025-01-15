@@ -21,9 +21,11 @@ export const Introduce: React.FC = () => {
             
             <div className={styles.footer}>
                 <small className={styles.lastUpdate}>
-                    {t('component.ui.introduce.updateDate')}
+                    {t('component.ui.introduce.lastUpdate')}
                 </small>
-                <span className={styles.updateDate}>2024.12.26</span>
+                <span className={styles.updateDate}>
+                    {t('component.ui.introduce.updateDate')}
+                </span>
             </div>
         </section>
     )
