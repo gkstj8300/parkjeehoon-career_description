@@ -24,7 +24,7 @@ export const education: Translation = {
     },
     university2: {
         name: '방송통신대학교',
-        major: '컴퓨터과학과 재학',
+        major: '컴퓨터과학과 졸업예정',
         durationStart: '2023.03',
         durationEnd: '2025 졸업예정',
     },

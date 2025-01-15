@@ -24,7 +24,7 @@ export const education: Translation = {
     },
     university2: {
         name: 'Korea National Open University',
-        major: 'Currently studying Computer Science',
+        major: 'Expected to graduate in Computer Science',
         durationStart: '2023.03',
         durationEnd: 'Expected to graduate in 2025',
     },
