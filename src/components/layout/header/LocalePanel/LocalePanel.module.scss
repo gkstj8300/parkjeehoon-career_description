@@ -1,0 +1,19 @@
+.localeWrap {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+	padding: 16px;
+	font-size: 14px;
+	line-height: 1.6;
+	text-align: center;
+	border: 1px solid #a7a7a7;
+
+	li {
+		list-style-type: none;
+	}
+}
+
+.localeLink {
+	margin-left: 0;
+}

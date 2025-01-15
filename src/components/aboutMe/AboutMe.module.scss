@@ -1,10 +1,11 @@
 .aboutMeWrap {
-	display: flex;
-	justify-content: space-between;
 
 	@media (max-width: 530px) {
 		flex-direction: column;
 	}
+
+	display: flex;
+	justify-content: space-between;
 }
 
 .introduction {
@@ -16,20 +17,21 @@
 		i {
 			color: var(--color-text-primary);
 			font-style: normal;
-			text-overflow: ellipsis;
 			white-space: nowrap;
+			text-overflow: ellipsis;
 		}
 	}
 }
 
 .profileWrap {
-	display: flex;
-	align-items: center;
 
 	@media (max-width: 530px) {
-		padding-top: 1rem;
 		justify-content: center;
+		padding-top: 1rem;
 	}
+
+	display: flex;
+	align-items: center;
 }
 
 .profileImg {
@@ -74,20 +76,24 @@
 
 .phoneIcon {
 	@include icon;
+
 	background-image: url(./assets/phoneIcon.png);
 }
 
 .emailIcon {
 	@include icon;
+
 	background-image: url(./assets/emailIcon.png);
 }
 
 .githubIcon {
 	@include icon;
+
 	background-image: url(./assets/githubIcon.png);
 }
 
 .blogIcon {
 	@include icon;
+
 	background-image: url(./assets/blogIcon.png);
 }

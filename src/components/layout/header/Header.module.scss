@@ -6,6 +6,19 @@
 	width: 100%;
 }
 
+.menu {
+	position: absolute;
+	left: -230%;
+	z-index: 200;
+	width: 65px;
+	background: #fff;
+	box-shadow: 0 1px 5px 0 rgb(0 0 0 / 0.3);
+}
+
+.leftWidth {
+	left: -100% !important;
+}
+
 .locale {
 	display: grid;
 	gap: 8rem;
@@ -16,37 +29,17 @@
 	justify-items: right;
 }
 
+.localeContainer {
+	position: relative;
+}
+
 .localeIcon {
-	width: 32px !important;
-	height: 33px !important;
+	display: block;
+	width: 32px;
+	height: 33px;
 	background-image: url(./assets/locale.svg);
 	background-repeat: no-repeat;
 	background-position-x: -4px;
 	background-size: cover;
 	cursor: pointer;
-}
-
-.localeWrap {
-	position: absolute;
-	z-index: 1;
-	padding: 8px 24px;
-	background-color: #fff;
-	border: 1px solid #e6e6e6;
-	border-radius: 8px;
-	visibility: hidden;
-	opacity: 0;
-	transition: all 0.2s ease-out;
-
-	li {
-		list-style-type: none;
-	}
-
-	&[data-hover='true'] {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-.localeLink {
-	margin-left: 0;
 }

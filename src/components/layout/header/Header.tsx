@@ -1,54 +1,43 @@
 import i18n from 'i18next';
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import styles from './Header.module.scss';
-
-const LOCALES = {
-    KOR: 'ko',
-    ENG: 'en',
-};
-
-type LocaleProps = {
-    locale: string; 
-    label: string; 
-    onClick: (locale: string) => void;
-}
-
-const LocaleLink: React.FC<LocaleProps> = ({ 
-    locale, 
-    label, 
-    onClick 
-}) => (
-    <li>
-        <a
-            className={styles.localeLink}
-            href="#"
-            onClick={(e) => {
-                e.preventDefault();
-                onClick(locale);
-            }}
-        >
-            {label}
-        </a>
-    </li>
-);
+import { LocalePanel } from './LocalePanel';
+import useOuterClick from '@/hooks/useOuterClick';
 
 export const Header: React.FC = () => {
-    const [isHover, setIsHover] = useState(false);
+    const rootRef = useRef<HTMLDivElement>(null);
+    const [expanded, setExpanded] = useState(false);
+
+    const panelRef = useRef<HTMLDivElement>(null);
 
     const handleLocaleChangeClick = useCallback((locale: string) => {
         i18n.changeLanguage(locale);
     }, []);
 
+    useOuterClick(
+		rootRef as React.RefObject<HTMLElement>,
+		useCallback(() => setExpanded(false), [])
+	);
+
     return (
-        <div className={styles.header}>
-            <div className={styles.locale} onMouseLeave={() => setIsHover(false)}>
-                <div className={styles.localeWrap} data-hover={isHover}>
-                    <ul>
-                        <LocaleLink locale={LOCALES.KOR} label="KOR" onClick={handleLocaleChangeClick} />
-                        <LocaleLink locale={LOCALES.ENG} label="ENG" onClick={handleLocaleChangeClick} />
-                    </ul>
+        <div className={styles.header} ref={rootRef}>
+            <div className={styles.locale}>
+                <div className={styles.localeContainer}>
+                    <div
+                        className={styles.menu}
+                        ref={panelRef}
+                    >
+                        {expanded && 
+                            <LocalePanel
+                                handleLocaleChangeClick={handleLocaleChangeClick}
+                            />
+                        }
+                    </div>
+                    <i 
+                        className={styles.localeIcon}
+                        onClick={() => setExpanded(expanded => !expanded)}
+                    ></i>
                 </div>
-                <i className={styles.localeIcon} onMouseOver={() => setIsHover(true)}></i>
             </div>
         </div>
     );

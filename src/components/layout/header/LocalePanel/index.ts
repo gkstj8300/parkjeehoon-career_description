@@ -1,0 +1,1 @@
+export { LocalePanel } from './LocalePanel';
