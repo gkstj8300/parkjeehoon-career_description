@@ -13,6 +13,7 @@
 
 	h2 {
 		color: var(--color-text-secondary);
+		-webkit-print-color-adjust:exact;
 
 		i {
 			color: var(--color-text-primary);
@@ -78,22 +79,26 @@
 	@include icon;
 
 	background-image: url(./assets/phoneIcon.png);
+	-webkit-print-color-adjust:exact;
 }
 
 .emailIcon {
 	@include icon;
 
 	background-image: url(./assets/emailIcon.png);
+	-webkit-print-color-adjust:exact;
 }
 
 .githubIcon {
 	@include icon;
 
 	background-image: url(./assets/githubIcon.png);
+	-webkit-print-color-adjust:exact;
 }
 
 .blogIcon {
 	@include icon;
 
 	background-image: url(./assets/blogIcon.png);
+	-webkit-print-color-adjust:exact;
 }

@@ -72,6 +72,7 @@
 	text-align: center;
 	background-color: rgb(43 157 177);
 	border-radius: 10px;
+	-webkit-print-color-adjust:exact;
 }
 
 @media (max-width: 530px) {
