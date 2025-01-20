@@ -63,6 +63,10 @@
 .email {
 	margin-left: 12px;
 	cursor: pointer;
+
+	&:hover {
+		color: #aeaeae;
+	}
 }
 
 .iconLink {
