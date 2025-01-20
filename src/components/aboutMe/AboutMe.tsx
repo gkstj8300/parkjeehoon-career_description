@@ -3,6 +3,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import styles from './AboutMe.module.scss';
 import profileImg from '@/components/aboutMe/assets/profile.jpg';
 import { Title } from '@/components/ui/title';
+import { useTooltip } from '@/components/ui/tooltips';
 import { tractEvent } from '@/logs/googleAnalytics/event';
 
 const ACTION_CLICK = 'click';
@@ -10,9 +11,22 @@ const ACTION_CLICK = 'click';
 export const AboutMe: React.FC = () => {
     const { t } = useTranslation();
 
+    const { bind } = useTooltip<HTMLDivElement>({
+		content: t('component.ui.aboutMe.emailTooltip'),
+		theme: 'dark',
+        direction: 'left',
+		closeOnClick: true,
+	});
+
     const handleLinkClick = useCallback((label: string) => {
         tractEvent({ action: ACTION_CLICK, category: 'AboutMe', label })
     }, []);
+
+    const handleEmailCopy = useCallback((email: string) => {
+        navigator.clipboard.writeText(email).then(() => {
+            alert(t('component.ui.aboutMe.emailCopy'));
+        });
+    }, [t]);
 
     return (
         <section>
@@ -25,7 +39,9 @@ export const AboutMe: React.FC = () => {
                     <ul className={styles.description}>
                         <li className={styles.list}>
                             <i className={styles.emailIcon}></i>
-                            <a href={t('component.ui.aboutMe.email')}>{t('component.ui.aboutMe.email')}</a>
+                            <span className={styles.email} {...bind}>
+                                <span onClick={() => handleEmailCopy(t('component.ui.aboutMe.email'))}>{t('component.ui.aboutMe.email')}</span>
+                            </span>
                         </li>
                         <li className={styles.list}>
                             <i className={styles.phoneIcon}></i>

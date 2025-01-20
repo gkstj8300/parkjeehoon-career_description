@@ -7,4 +7,6 @@ export const aboutMe: Translation = {
     github: 'https://github.com/gkstj8300',
     blog: 'https://gkstj8300.tistory.com/',
     phone: 'Please contact me by email',
+    emailTooltip: '이메일을 클릭하시면 복사가 가능합니다.',
+    emailCopy: '이메일 주소가 복사되었습니다.',
 };
