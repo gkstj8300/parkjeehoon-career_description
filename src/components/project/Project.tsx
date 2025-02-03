@@ -34,7 +34,7 @@ export const Project: React.FC = () => {
         durationEnd: t(`component.ui.project.${key}.durationEnd`),
         skillKeywords: t(`component.ui.project.${key}.skillKeywords`),
         description: t(`component.ui.project.${key}.description`),
-    }));
+    })).reverse();
 
     return (
         <section>
