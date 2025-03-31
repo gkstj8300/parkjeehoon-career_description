@@ -3,9 +3,9 @@ import { Translation } from '@/i18n/types';
 export const experience: Translation = {
     title: 'Experience',
     naedam: {
-        name: '내담C&C',
+        name: '내담씨앤씨',
         durationStart: '2022-03',
-        durationEnd: '재직중',
+        durationEnd: '2025-03',
     },
     experience: `한화생명 코어프로젝트 개발 (2명)<br />
                  Naedam Admin 프로그램 구축 (3명)<br />

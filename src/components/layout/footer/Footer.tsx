@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
                 </a>
                 <a 
                     target="_blank" 
-                    href='https://gkstj8300.tistory.com/'
+                    href='https://www.baakhan.com/'
                     onClick={() => handleLinkClick('blog')}
                 >
                     <span>{t('component.ui.layouts.footer.blog')}</span>
