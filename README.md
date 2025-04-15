@@ -1,4 +1,4 @@
-# Park Jee Hoon Portfolio
+# Park Jee Hoon Career Description
 
 **Version**: 0.1.0  
 **Node.js Version**: 20.x
@@ -6,7 +6,7 @@
 ---
 
 ## 프로젝트 소개
-`parkjeehoon-portfolio`는 박지훈 개인 포트폴리오를 위한 웹 애플리케이션 프로젝트입니다.  
+`parkjeehoon-career_description`는 박지훈 경력기술서를 위한 웹 애플리케이션 프로젝트입니다.  
 [Next.js](https://nextjs.org/)와 최신 프론트엔드 기술 스택을 활용하여 설계되었으며,  
 i18n(다국어 지원), 스타일 관리, 코드 정리를 통해 유지보수성과 확장성을 극대화했습니다.
 
