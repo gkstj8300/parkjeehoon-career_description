@@ -20,7 +20,7 @@ export const project: Translation = {
         durationEnd: '2023-03',
         skillKeywords: 'Java, Spring Boot, JavaScript, jQuery, MariaDB, Servlet, Cafe24',
         description: `Design, implementation, and system construction of backend and frontend for the in-house homepage<br />
-                      Integration and application with Neadam Admin program<br />
+                      Integration and application with Naedam Admin program<br />
                       Design and implementation of utilities for asynchronous task processing<br />
                       Design and development based on user experience (UX) and user interface (UI)<br />
                       Implementation of SEO (Search Engine Optimization) optimization<br />
