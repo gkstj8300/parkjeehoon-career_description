@@ -5,7 +5,7 @@ export const experience: Translation = {
     naedam: {
         name: 'Naedam C&C',
         durationStart: '2022-03',
-        durationEnd: '재직중',
+        durationEnd: '2025-03',
     },
     experience: `Hanwha Life Core Project Development (2 members)<br />
                  Development of Naedam Admin Program (3 members)<br />

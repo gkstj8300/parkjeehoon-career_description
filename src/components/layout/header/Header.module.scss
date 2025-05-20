@@ -8,7 +8,8 @@
 
 .menu {
 	position: absolute;
-	left: -230%;
+	top: 4px;
+	left: 10%;
 	z-index: 200;
 	width: 65px;
 	background: #fff;
@@ -31,6 +32,10 @@
 
 .localeContainer {
 	position: relative;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	cursor: pointer;
 }
 
 .localeIcon {
@@ -42,4 +47,8 @@
 	background-position-x: -4px;
 	background-size: cover;
 	cursor: pointer;
+}
+
+.pdf:hover {
+	color: #aeaeae;
 }
