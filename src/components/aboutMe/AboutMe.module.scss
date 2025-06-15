@@ -111,3 +111,10 @@
 	background-image: url(./assets/blogIcon.png);
 	-webkit-print-color-adjust:exact;
 }
+
+.portfolioIcon {
+	@include icon;
+
+	background-image: url(./assets/portfolio.svg);
+	-webkit-print-color-adjust:exact;
+}

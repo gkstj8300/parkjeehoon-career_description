@@ -51,22 +51,36 @@ export const AboutMe: React.FC = () => {
                             <i className={styles.githubIcon}></i>
                             <a
                                 className={styles.iconLink}
-                                href={t('component.ui.aboutMe.github')} 
+                                href={t('component.ui.aboutMe.github')}
+                                title={t('component.ui.aboutMe.githubTxt')} 
                                 target="_blank"
                                 onClick={() => handleLinkClick('github')}
                             >
-                                {t('component.ui.aboutMe.github')}
+                                {t('component.ui.aboutMe.githubTxt')}
                             </a>
                         </li>
                         <li className={styles.list}>
                             <i className={styles.blogIcon}></i>
                             <a
                                 className={styles.iconLink}
-                                href={t('component.ui.aboutMe.blog')} 
+                                href={t('component.ui.aboutMe.blog')}
+                                title={t('component.ui.aboutMe.blogTxt')}
                                 target="_blank"
                                 onClick={() => handleLinkClick('blog')}
                             >
-                                {t('component.ui.aboutMe.blog')}
+                                {t('component.ui.aboutMe.blogTxt')}
+                            </a>
+                        </li>
+                        <li className={styles.list}>
+                            <i className={styles.portfolioIcon}></i>
+                            <a
+                                className={styles.iconLink}
+                                href={t('component.ui.aboutMe.portfolio')}
+                                title={t('component.ui.aboutMe.portfolioTxt')}
+                                target="_blank"
+                                onClick={() => handleLinkClick('portfolio')}
+                            >
+                                {t('component.ui.aboutMe.portfolioTxt')}
                             </a>
                         </li>
                     </ul>
