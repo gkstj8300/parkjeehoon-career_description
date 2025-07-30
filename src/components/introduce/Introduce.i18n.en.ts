@@ -6,5 +6,5 @@ export const introduce: Translation = {
         I am dedicated to contributing through diverse experiences and environments. To accumulate a variety of experiences, I engage in various projects, continuously learning and gaining experience through development, maintenance, and operations. I make an effort to document areas for improvement on my development blog, with the goal of reaching the pinnacle of frontend development.<br /><br />
         While coding skills are important in development, I believe that communication is the most crucial aspect. I am committed to learning, experiencing, and striving to grow as a better frontend developer through active communication and a sense of responsibility with both the business and users.`,
     lastUpdate: 'Latest Updated',
-    updateDate: '2025.06.16',
+    updateDate: '2025.07.31',
 };
